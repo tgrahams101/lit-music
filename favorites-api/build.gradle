@@ -33,7 +33,6 @@ dependencies {
 	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	runtime('org.postgresql:postgresql')
-	compile 'org.flywaydb:flyway-core'
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compileOnly 'org.projectlombok:lombok'
 }

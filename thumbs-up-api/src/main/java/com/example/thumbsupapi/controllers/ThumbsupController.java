@@ -12,7 +12,7 @@ public class ThumbsupController {
     private ThumbsupRepository thumbsupRepository;
 
     @GetMapping("/")
-    public Iterable<Thumbsup> findAllThumbsup() {
+    public Iterable<Thumbsup> findAllThumbsups() {
         return thumbsupRepository.findAll();
     }
 

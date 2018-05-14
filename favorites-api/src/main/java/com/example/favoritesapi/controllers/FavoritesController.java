@@ -10,27 +10,32 @@ public class FavoritesController {
     @Autowired
     private FavoriteRepository favoriteRepository;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/")
     public Iterable<Favorite> findAllFavorites() {
         return favoriteRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{favoriteId}")
     public Favorite findFavoriteById(@PathVariable Long favoriteId) {
         return favoriteRepository.findOne(favoriteId);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/{favoriteId}")
     public HttpStatus deleteFavoriteById(@PathVariable Long favoriteId) {
         favoriteRepository.delete(favoriteId);
         return HttpStatus.OK;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/")
     public Favorite createNewFavorite(@RequestBody Favorite newFavorite) {
         return favoriteRepository.save(newFavorite);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PatchMapping("/{favoriteId}")
     public Favorite	updateFavoriteById(@PathVariable Long favoriteId, @RequestBody Favorite favoriteRequest) {
         Favorite favoriteFromDb = favoriteRepository.findOne(favoriteId);
