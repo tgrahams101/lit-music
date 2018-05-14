@@ -9,3 +9,7 @@ See what tunes have caught fire. Welcome to Lit Music Charts
 ## Features
 - Community can favorite songs
 - Community can thumbs up/like songs
+
+## How to start
+- docker-compose up to start back-end from root folder
+- cd into front-end and then run ng serve, to start front-end
