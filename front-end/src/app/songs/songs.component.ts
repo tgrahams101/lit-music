@@ -43,4 +43,16 @@ export class SongsComponent implements OnInit {
     song.likes++;
   }
 
+  addFavorite(song) {
+    const url = 'http://api-gateway:8080/favorites/';
+    const localUrl = 'http://localhost:8080/favorites';
+    this.http.post(localUrl, song)
+    .subscribe( (response) => {
+      console.log(response);
+    }, (error) => {
+      console.log('ERROR IN MAKING A POST TO FAVORITES');
+    });
+    console.log('HIT add favorite route');
+  }
+
 }
