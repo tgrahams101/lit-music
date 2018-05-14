@@ -1,1 +1,17 @@
-<h2> Top Songs </h2>
+<section *ngIf="songs">
+
+  <div *ngFor="let song of songs">
+    <h3> {{song.title}} </h3>
+    <h4>{{song.artistName}}</h4>
+    <div class="image_container">
+      <img class="thumbs" src="https://findicons.com/files/icons/2831/mono_business_2/128/thumbs_up.png" />
+      <img class="artwork"src="{{song.artworkUrl}}" />
+      <img class="heart" src="http://www.iconarchive.com/download/i54496/simplefly/simple-green-social-media/social-media-love.ico" />
+    </div>
+
+    <p> <b><u>Popularity Score: {{song.popularityScore}} </u></b></p>
+
+  </div>
+
+
+</section>

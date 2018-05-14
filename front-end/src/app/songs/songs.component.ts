@@ -19,13 +19,17 @@ export class SongsComponent implements OnInit {
     this.fetchMusicService.fetchTopSongs().subscribe( (response) => {
       console.log('GUCCI MANE!');
       const arrayOfTracks = response.json().items;
-      const parsedTracks = arrayOfTracks.map( (track) => {
+      console.log('API PAYLOAD', arrayOfTracks);
+      const parsedTracks = arrayOfTracks.map( (track, index) => {
+        if (index === 0) {
+          console.log(track);
+        }
         const preparedObject = {
           title: track.track.name,
           artistName: track.track.artists[0].name,
           popularityScore: track.track.popularity,
-          artworkUrl: track.track.preview_url
         };
+        preparedObject.artworkUrl = track.track.album.images[1].url || null;
         return preparedObject;
       });
       this.songs = parsedTracks;
