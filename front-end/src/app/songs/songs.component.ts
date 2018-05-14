@@ -28,14 +28,19 @@ export class SongsComponent implements OnInit {
           title: track.track.name,
           artistName: track.track.artists[0].name,
           popularityScore: track.track.popularity,
-          listenLink: track.track.external_urls.spotify
+          listenLink: track.track.external_urls.spotify,
+          artworkUrl: track.track.album.images[1].url,
+          likes: 0
         };
-        preparedObject.artworkUrl = track.track.album.images[1].url || null;
         return preparedObject;
       });
       this.songs = parsedTracks;
       console.log(this.songs);
     });
+  }
+
+  incrementLikes(song) {
+    song.likes++;
   }
 
 }
