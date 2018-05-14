@@ -26,3 +26,30 @@ header img:nth-child(3) {
 span {
     border-bottom: 5px solid black;
 }
+
+p {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    padding: 5px;
+}
+
+#click_prompt {
+    border-radius: 20px;
+    border: 2px solid lightcoral;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#click_prompt:hover {
+    background-color: gray;
+}
+
+#prompt_container {
+    display: flex;
+}

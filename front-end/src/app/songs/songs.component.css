@@ -34,6 +34,14 @@ h3, h4 {
     animation-iteration-count: infinite;
 }
 
+.popularity:hover {
+    animation: spin .5s;
+}
+
+.popularity {
+    display: inline-block;
+}
+
 .thumbs {
     width: 40px;
     height: 40px;
@@ -46,6 +54,11 @@ p {
 @media (max-width: 1000px) {
     section {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    section {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -61,4 +74,17 @@ p {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
