@@ -72,6 +72,7 @@ export class SongsComponent implements OnInit {
     this.http.post('/api/favorites', songToAdd)
     .subscribe( (response) => {
       console.log(response);
+      console.log(this);
     }, (error) => {
       console.log('ERROR IN MAKING A POST TO FAVORITES');
     });

@@ -1,0 +1,36 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+section {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    text-align: center;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    border-radius: 15%;
+}
+a{
+    text-align: center;
+}
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: rgb(128, 30, 0);
+    border-radius: 15%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
