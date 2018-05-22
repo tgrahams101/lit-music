@@ -1,3 +1,9 @@
+<div id="songs_header">
+  <p>Live feed of top songs on Spotify</p> <br />
+  <a routerLink="/favorites"><p> See Favorited Songs :) </p> </a>
+  <div id="prompt_container"><p id="click_prompt">Click to Listen <img id="tight" src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/ok-hand-dark-skin-tone.png" /></p></div>
+ <div>
+
 <section *ngIf="songs">
 
   <div *ngFor="let song of songs">
