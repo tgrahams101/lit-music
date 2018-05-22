@@ -13,7 +13,7 @@ export class FetchMusicService {
       'Authorization': 'Bearer BQBScDyy-YNARV-Enlv2nfJNSkm77raGstb_icChS8tAFJwP3OmdGpU0iqp7AoE_5X8jNFxq2DX0UJtDZZ8'
     };
     const headers = new Headers();
-    headers.append('Authorization', 'Bearer BQATka1Ax9gLBwWbbFaM5DALakBjnzBM_y4p2mYlZD2vGYWMXClTXMJx9sdu5LN7RAXNnq8vnDKNCosc18E');
+    headers.append('Authorization', 'Bearer BQCCl5Z-LK7R2Ghmze2v8YsSVjGWJFi10tZWa9q6F3Kmc1aSQjrocnbtfki3InomeBqmeqrpT48FcCkYkGM');
     const options = new RequestOptions();
     options.headers = headers;
     const url = 'https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks';

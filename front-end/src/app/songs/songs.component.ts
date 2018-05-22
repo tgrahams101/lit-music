@@ -44,9 +44,10 @@ export class SongsComponent implements OnInit {
   }
 
   addFavorite(song) {
+    console.log('SONG', song);
     const url = 'http://api-gateway:8080/favorites/';
     const localUrl = 'http://localhost:8080/favorites';
-    this.http.post(localUrl, song)
+    this.http.post('/api/favorites', song)
     .subscribe( (response) => {
       console.log(response);
     }, (error) => {
