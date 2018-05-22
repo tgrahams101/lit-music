@@ -1,8 +1,8 @@
 import { FetchMusicService } from './../fetch-music.service';
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
-
 
 @Component({
   selector: 'app-songs',
@@ -11,14 +11,32 @@ import { Subject } from 'rxjs';
 })
 export class SongsComponent implements OnInit {
   songs: any;
+  token: any;
 
-  constructor(private http: Http, private fetchMusicService: FetchMusicService) { }
+  constructor(private http: HttpClient, private fetchMusicService: FetchMusicService) { }
 
   ngOnInit() {
+    setInterval(this.getToken, 3500000);
+    this.getToken();
+  }
 
-    this.fetchMusicService.fetchTopSongs().subscribe( (response) => {
-      console.log('GUCCI MANE!');
-      const arrayOfTracks = response.json().items;
+  getToken() {
+    this.http.get('/api/token')
+      .toPromise()
+      .then( (response) => {
+        console.log('RESPONSE FROM SPOTIFY API', Object.keys(response));
+        this.token = response['access_token'];
+        // this.token = response.json().access_token;
+        this.fetchMusic();
+      })
+      .catch( (error) => {
+        console.log('FAILED TO RETRIEVE API');
+      });
+  }
+
+  fetchMusic() {
+    this.fetchMusicService.fetchTopSongs(this.token).subscribe( (responseFromService) => {
+      const arrayOfTracks = responseFromService.json().items;
       console.log('API PAYLOAD', arrayOfTracks);
       const parsedTracks = arrayOfTracks.map( (track, index) => {
         if (index === 0) {
@@ -35,7 +53,6 @@ export class SongsComponent implements OnInit {
         return preparedObject;
       });
       this.songs = parsedTracks;
-      console.log(this.songs);
     });
   }
 
@@ -43,11 +60,16 @@ export class SongsComponent implements OnInit {
     song.likes++;
   }
 
-  addFavorite(song) {
-    console.log('SONG', song);
+  addFavorite({artworkUrl, artistName, title}) {
+    const songToAdd =  {
+      artworkUrl,
+      artistName,
+      title
+    };
+    console.log('SONG TO ADD', songToAdd);
     const url = 'http://api-gateway:8080/favorites/';
     const localUrl = 'http://localhost:8080/favorites';
-    this.http.post('/api/favorites', song)
+    this.http.post('/api/favorites', songToAdd)
     .subscribe( (response) => {
       console.log(response);
     }, (error) => {

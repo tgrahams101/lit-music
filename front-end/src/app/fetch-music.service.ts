@@ -8,12 +8,12 @@ export class FetchMusicService {
 
   constructor(private http: Http) { }
 
-  fetchTopSongs() {
+  fetchTopSongs(token) {
     const headerTable = {
       'Authorization': 'Bearer BQBScDyy-YNARV-Enlv2nfJNSkm77raGstb_icChS8tAFJwP3OmdGpU0iqp7AoE_5X8jNFxq2DX0UJtDZZ8'
     };
     const headers = new Headers();
-    headers.append('Authorization', 'Bearer BQCCl5Z-LK7R2Ghmze2v8YsSVjGWJFi10tZWa9q6F3Kmc1aSQjrocnbtfki3InomeBqmeqrpT48FcCkYkGM');
+    headers.append('Authorization', `Bearer ${token}`);
     const options = new RequestOptions();
     options.headers = headers;
     const url = 'https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks';
