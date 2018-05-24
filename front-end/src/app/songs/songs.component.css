@@ -25,6 +25,34 @@ h3, h4 {
     
 }
 
+#songs_header button {
+    border: none;
+    margin: 0 auto;
+    display: block;
+    border-radius: 15%;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+#songs_header input {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid skyblue;
+    padding: 10px;
+    border-radius: 10%;
+     -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.4),
+            0 0 16px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
 .heart:hover, .thumbs:hover {
     transform: scale(1.5);
 }
