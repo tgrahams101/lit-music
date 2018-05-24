@@ -1,0 +1,10 @@
+{
+    "/api/favorites/*": {
+        "target": "http://localhost:8080",
+        "secure": false
+    },
+    "/api/token": {
+        "target": "http://localhost:3000",
+        "secure": false
+    }
+}

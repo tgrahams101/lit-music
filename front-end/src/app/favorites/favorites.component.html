@@ -1,0 +1,10 @@
+<h3>Favorites! </h3>
+<a routerLink="/"><p>Go Home</p></a>
+<section *ngIf=(this.favorites)>
+  <div *ngFor="let favorite of favorites">
+   <p> <b>Artist: </b> {{favorite.artistName}}</p>
+   <p> <b> {{favorite.title}}</b></p>
+    <img src="{{favorite.artworkUrl}}" />
+    <button (click)="delete(favorite)">Unfavorite</button>
+    </div>
+</section>
