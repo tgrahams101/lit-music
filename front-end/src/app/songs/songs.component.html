@@ -1,6 +1,8 @@
 <div id="songs_header">
-  <p>Live feed of top songs on Spotify</p> <br />
+  <input type="text" placeholder="Search Spotify" [(ngModel)]="searchQuery" (keyup)="searchTracks(searchQuery)"/>
+  <br />
   <a routerLink="/favorites"><p> See Favorited Songs :) </p> </a>
+  <button (click)="fetchMusic()"> Top Hits </button>
   <div id="prompt_container"><p id="click_prompt">Click Any Song Below to Listen <img id="tight" src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/ok-hand-dark-skin-tone.png" /></p></div>
  <div>
 
@@ -11,7 +13,7 @@
     <h4>{{song.artistName}}</h4>
     <div class="image_container">
       <img class="thumbs" (click)="incrementLikes(song)" src="https://findicons.com/files/icons/2831/mono_business_2/128/thumbs_up.png" />
-      <a href="{{song.listenLink}}"><img class="artwork"src="{{song.artworkUrl}}" /> </a>
+      <a href="{{song.playUrl}}"><img class="artwork"src="{{song.artworkUrl}}" /> </a>
       <img class="heart" (click)="addFavorite(song)" src="http://www.iconarchive.com/download/i54496/simplefly/simple-green-social-media/social-media-love.ico" />
     </div>
 

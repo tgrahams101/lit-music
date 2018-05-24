@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { debounceTime, map, distinctUntilChanged, catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-songs',
@@ -12,12 +13,40 @@ import { Subject } from 'rxjs';
 export class SongsComponent implements OnInit {
   songs: any;
   token: any;
+  searchQuery: string;
+  searchSubject = new Subject();
 
   constructor(private http: HttpClient, private fetchMusicService: FetchMusicService) { }
 
   ngOnInit() {
     setInterval(this.getToken, 3500000);
     this.getToken();
+    this.searchSubject.pipe(debounceTime(1000), distinctUntilChanged())
+      .subscribe( (query) => {
+        console.log('QUERY FROM PIPED SUBJECT', query);
+        this.fetchMusicService.searchSpotify(this.token, query)
+        .subscribe( (response) => {
+          console.log('RESPONSE FROM FETCH MUSIC', response);
+          console.log('RESPONSE FROM SERVICE', response);
+          let json = response.json();
+          json = json.tracks.items;
+          console.log(json);
+          const preparedSongs = json.map((element) => {
+            return {
+              artistName: element.artists.reduce((previous, currentArtist, currentIndex) => {
+                return currentIndex === 0 ? `${currentArtist.name}` : previous + ` and ${currentArtist.name}`;
+              }, ''),
+              artworkUrl: element.album.images[1].url,
+              title: element.name,
+              popularityScore: element.popularity,
+              playUrl: element.external_urls.spotify,
+              likes: 0
+            };
+          });
+          console.log(preparedSongs);
+          this.songs = preparedSongs;
+        });
+      });
   }
 
   getToken() {
@@ -46,7 +75,7 @@ export class SongsComponent implements OnInit {
           title: track.track.name,
           artistName: track.track.artists[0].name,
           popularityScore: track.track.popularity,
-          listenLink: track.track.external_urls.spotify,
+          playUrl: track.track.external_urls.spotify,
           artworkUrl: track.track.album.images[1].url,
           likes: 0
         };
@@ -58,6 +87,10 @@ export class SongsComponent implements OnInit {
 
   incrementLikes(song) {
     song.likes++;
+  }
+
+  searchTracks(query) {
+    this.searchSubject.next(query);
   }
 
   addFavorite({artworkUrl, artistName, title}) {
