@@ -1,8 +1,8 @@
 <div id="songs_header">
+  <a routerLink="/favorites"><p> See Favorited Songs</p> </a>
   <input type="text" placeholder="Search Spotify" [(ngModel)]="searchQuery" (keyup)="searchTracks(searchQuery)"/>
   <br />
-  <a routerLink="/favorites"><p> See Favorited Songs :) </p> </a>
-  <button (click)="fetchMusic()"> Top Hits </button>
+  <button (click)="fetchMusic()"> Most Lit Songs (United States) </button>
   <div id="prompt_container"><p id="click_prompt">Click Any Song Below to Listen <img id="tight" src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/ok-hand-dark-skin-tone.png" /></p></div>
  <div>
 

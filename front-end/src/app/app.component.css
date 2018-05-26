@@ -11,18 +11,32 @@ header * {
     display: inline-block;
 }
 
-header > img:nth-child(1) {
+header > img:first-of-type {
     width: 75px;
     height: 75px;
     margin-right: 20px;
 }
 
-header img:nth-child(3) {
+header > img:last-of-type {
     width: 75px;
     height: 75px;
-    margin-left: 1em;
+    margin-left: .5em;
 }
 
-span {
+h1 span {
     border-bottom: 5px solid black;
+}
+
+a span {
+    font-size: 15px;
+    top: 20;
+    right: 20%;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+}
+
+a span i {
+    margin-left: 10px;
+    color: inherit;
 }
