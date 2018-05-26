@@ -67,4 +67,11 @@ services:
     volumes:
       - './flyway/conf:/flyway/conf'
       - './flyway/sql:/flyway/sql'
-
+  # node-server:
+  #   image: node:8
+  #   ports:
+  #     - '3001:3001'
+  #   working_dir: /app
+  #   volumes:
+  #     - ./front-end:/app
+  #   command: 'npm start'

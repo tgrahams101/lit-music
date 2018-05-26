@@ -1,9 +1,11 @@
+import { environment } from './../../environments/environment';
 import { FetchMusicService } from './../fetch-music.service';
 import { Component, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { debounceTime, map, distinctUntilChanged, catchError } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-songs',
@@ -20,7 +22,8 @@ export class SongsComponent implements OnInit {
 
   ngOnInit() {
     setInterval(this.getToken, 3500000);
-    this.getToken();
+    // tslint:disable-next-line:no-unused-expression
+    this.token || this.getToken();
     this.searchSubject.pipe(debounceTime(1000), distinctUntilChanged())
       .subscribe( (query) => {
         console.log('QUERY FROM PIPED SUBJECT', query);
@@ -50,7 +53,7 @@ export class SongsComponent implements OnInit {
   }
 
   getToken() {
-    this.http.get('/api/token')
+    this.http.get('https://spotify-lit-node-server.herokuapp.com/api/token')
       .toPromise()
       .then( (response) => {
         console.log('RESPONSE FROM SPOTIFY API', Object.keys(response));
@@ -93,23 +96,23 @@ export class SongsComponent implements OnInit {
     this.searchSubject.next(query);
   }
 
-  addFavorite({artworkUrl, artistName, title}) {
-    const songToAdd =  {
-      artworkUrl,
-      artistName,
-      title
-    };
-    console.log('SONG TO ADD', songToAdd);
-    const url = 'http://api-gateway:8080/favorites/';
-    const localUrl = 'http://localhost:8080/favorites';
-    this.http.post('/api/favorites', songToAdd)
-    .subscribe( (response) => {
-      console.log(response);
-      console.log(this);
-    }, (error) => {
-      console.log('ERROR IN MAKING A POST TO FAVORITES');
-    });
-    console.log('HIT add favorite route');
-  }
+  // addFavorite({artworkUrl, artistName, title}) {
+  //   const songToAdd =  {
+  //     artworkUrl,
+  //     artistName,
+  //     title
+  //   };
+  //   console.log('SONG TO ADD', songToAdd);
+  //   const url = 'http://api-gateway:8080/favorites/';
+  //   const localUrl = 'http://localhost:8080/favorites';
+  //   this.http.post(`${environment.apiHost}/api/favorites`, songToAdd)
+  //   .subscribe( (response) => {
+  //     console.log(response);
+  //     console.log(this);
+  //   }, (error) => {
+  //     console.log('ERROR IN MAKING A POST TO FAVORITES');
+  //   });
+  //   console.log('HIT add favorite route');
+  // }
 
 }

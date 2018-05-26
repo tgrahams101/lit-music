@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
@@ -14,7 +15,7 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit() {
 
-    this.http.get('/api/favorites')
+    this.http.get(`${environment.apiHost}/api/favorites`)
     .subscribe( (response) => {
       console.log('RESPONSE FROM API FAVORITES', response.json());
       // console.log(this);
