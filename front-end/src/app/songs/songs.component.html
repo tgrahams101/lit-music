@@ -14,7 +14,7 @@
     <div class="image_container">
       <img class="thumbs" (click)="incrementLikes(song)" src="https://findicons.com/files/icons/2831/mono_business_2/128/thumbs_up.png" />
       <a href="{{song.playUrl}}"><img class="artwork"src="{{song.artworkUrl}}" /> </a>
-      <img class="heart" (click)="add(song)" src="http://www.iconarchive.com/download/i54496/simplefly/simple-green-social-media/social-media-love.ico" />
+      <img class="heart" (click)="addFavorite(song)" src="http://www.iconarchive.com/download/i54496/simplefly/simple-green-social-media/social-media-love.ico" />
     </div>
 
     <p> <b><u><span class="popularity">Popularity Score: {{song.popularityScore}} </span></u></b></p>
