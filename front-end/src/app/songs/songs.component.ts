@@ -96,23 +96,23 @@ export class SongsComponent implements OnInit {
     this.searchSubject.next(query);
   }
 
-  // addFavorite({artworkUrl, artistName, title}) {
-  //   const songToAdd =  {
-  //     artworkUrl,
-  //     artistName,
-  //     title
-  //   };
-  //   console.log('SONG TO ADD', songToAdd);
-  //   const url = 'http://api-gateway:8080/favorites/';
-  //   const localUrl = 'http://localhost:8080/favorites';
-  //   this.http.post(`${environment.apiHost}/api/favorites`, songToAdd)
-  //   .subscribe( (response) => {
-  //     console.log(response);
-  //     console.log(this);
-  //   }, (error) => {
-  //     console.log('ERROR IN MAKING A POST TO FAVORITES');
-  //   });
-  //   console.log('HIT add favorite route');
-  // }
+  addFavorite({artworkUrl, artistName, title}) {
+    const songToAdd =  {
+      artworkUrl,
+      artistName,
+      title
+    };
+    console.log('SONG TO ADD', songToAdd);
+    const url = 'http://api-gateway:8080/favorites/';
+    const localUrl = 'http://localhost:8080/favorites';
+    this.http.post(`${environment.apiHost}/api/favorites`, songToAdd)
+    .subscribe( (response) => {
+      console.log(response);
+      console.log(this);
+    }, (error) => {
+      console.log('ERROR IN MAKING A POST TO FAVORITES');
+    });
+    console.log('HIT add favorite route');
+  }
 
 }
