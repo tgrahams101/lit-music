@@ -96,7 +96,7 @@ export class SongsComponent implements OnInit {
     this.searchSubject.next(query);
   }
 
-  addFavorite(item) {
+  add(item) {
     // const songToAdd =  {
     //   artworkUrl,
     //   artistName,
