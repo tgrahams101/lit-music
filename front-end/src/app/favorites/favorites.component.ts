@@ -1,4 +1,4 @@
-import { environment } from './../../environments/environment.prod';
+import { environment } from './../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
@@ -14,7 +14,7 @@ export class FavoritesComponent implements OnInit {
   constructor(private http: Http) { }
 
   ngOnInit() {
-
+    console.log('ENV VARIABLE', environment.apiHost);
     this.http.get(`${environment.apiHost}/api/favorites`)
     .subscribe( (response) => {
       console.log('RESPONSE FROM API FAVORITES', response.json());
