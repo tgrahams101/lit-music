@@ -28,7 +28,7 @@ export class FavoritesComponent implements OnInit {
   delete(item) {
     console.log('ITEM FOR DELETION', item);
     const index = this.favorites.indexOf(item);
-    const url = `${environment.apiHost}/api/favorites` + item.id;
+    const url = `${environment.apiHost}/api/favorites/` + item.id;
     console.log('URL TO HIT');
     this.http.delete(url)
     .subscribe ( (response) => {
