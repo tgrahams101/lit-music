@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="835c7fa3-3de8-46ed-9175-337e73c2d9d2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songwiz-front-end/src/registerServiceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumbs-up-api/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/thumbs-up-api/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -21,7 +37,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DemoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DemoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/example/spotifylitwrapperwithtests/DemoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -33,11 +49,38 @@
       <file leaf-file-name="FavoritesApiFeatureTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/example/spotifylitwrapperwithtests/features/FavoritesApiFeatureTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="549">
               <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbs-up-api/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/favorites-api/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -47,15 +90,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Favorite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/favorites-api/src/main/java/com/example/favoritesapi/models/Favorite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -93,24 +127,10 @@
         </entry>
       </file>
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -599,6 +619,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/spotifylitwrapperwithtests/models/Favorite.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/spotifylitwrapperwithtests/features/FavoritesApiFeatureTest.java" />
+        <option value="$PROJECT_DIR$/thumbs-up-api/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -612,7 +634,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="218" />
+    <option name="x" value="198" />
     <option name="y" value="23" />
     <option name="width" value="1043" />
     <option name="height" value="723" />
@@ -628,6 +650,11 @@
             <path>
               <item name="spotify-lit" type="b2602c69:ProjectViewProjectNode" />
               <item name="spotify-lit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotify-lit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotify-lit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="favorites-api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spotify-lit" type="b2602c69:ProjectViewProjectNode" />
@@ -761,6 +788,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotify-lit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotify-lit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="thumbs-up-api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -932,12 +964,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FavoritesApiFeatureTest_shouldAllowFullCrudFunctionalityForAFavorite - 2018.05.29 at 10h 50m 19s.xml">
-      <configuration name="FavoritesApiFeatureTest.shouldAllowFullCrudFunctionalityForAFavorite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FavoritesApiFeatureTest_shouldAllowFullCrudFunctionalityForAFavorite - 2018.05.29 at 10h 59m 15s.xml">
-      <configuration name="FavoritesApiFeatureTest.shouldAllowFullCrudFunctionalityForAFavorite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FavoritesApiFeatureTest_shouldAllowFullCrudFunctionalityForAFavorite - 2018.05.29 at 11h 35m 41s.xml">
       <configuration name="FavoritesApiFeatureTest.shouldAllowFullCrudFunctionalityForAFavorite" configurationId="JUnit" />
     </history-entry>
@@ -962,19 +988,26 @@
     <history-entry file="FavoritesApiFeatureTest_shouldAllowFullCrudFunctionalityForAFavorite - 2018.05.29 at 11h 56m 19s.xml">
       <configuration name="FavoritesApiFeatureTest.shouldAllowFullCrudFunctionalityForAFavorite" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DemoTest_demoTest - 2018.05.29 at 23h 20m 44s.xml">
+      <configuration name="DemoTest.demoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FavoritesApiFeatureTest_shouldAllowFullCrudFunctionalityForAFavorite - 2018.05.29 at 23h 21m 52s.xml">
+      <configuration name="FavoritesApiFeatureTest.shouldAllowFullCrudFunctionalityForAFavorite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="15882000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="218" y="23" width="1043" height="723" extended-state="0" />
+    <frame x="198" y="23" width="1043" height="723" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290735" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.4621285" side_tool="true" visible="true" weight="0.32819724" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.53787154" visible="true" weight="0.32819724" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
@@ -999,7 +1032,6 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290735" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1161,16 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/spotifylitwrapperwithtests/features/FavoritesApiFeatureTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/classes/com/example/spotifylitwrapperwithtests/DemoApplication.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1189,6 +1211,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/spotifylitwrapperwithtests/features/FavoritesApiFeatureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbs-up-api/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/favorites-api/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
         </state>
       </provider>
     </entry>
