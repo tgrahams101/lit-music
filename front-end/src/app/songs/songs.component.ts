@@ -53,7 +53,7 @@ export class SongsComponent implements OnInit {
   }
 
   getToken() {
-    this.http.get('https://spotify-lit-node-server.herokuapp.com/api/token')
+    this.http.get(`${environment.nodeHost}/api/token`)
       .toPromise()
       .then( (response) => {
         console.log('RESPONSE FROM SPOTIFY API', Object.keys(response));
