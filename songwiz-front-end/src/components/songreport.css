@@ -1,0 +1,20 @@
+h2 {
+    border: 2px solid white;
+    border-radius: 15%;
+}
+
+#song-report-container img {
+    width: 100px;
+    padding: 10px;
+    margin-bottom: -30px;
+}
+
+#song-report-container button {
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+#song-report-container ul {
+    display: inline-block;
+    text-align: left;
+}

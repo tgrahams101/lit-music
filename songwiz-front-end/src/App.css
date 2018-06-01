@@ -2,6 +2,10 @@
   text-align: center;
   background-color: #222;
   color: white;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -16,4 +20,14 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+img {
+  border-radius: 5%;
+}
+
+#logo {
+  width: 120px;
+
 }
