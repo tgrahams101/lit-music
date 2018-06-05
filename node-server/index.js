@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const querystring = require('querystring');
 const envToken = require('./env.js');
-const token = process.env.token || envToken;
+const token = process.env.token || envToken.spotify;
 const NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 const natural_language_understanding = new NaturalLanguageUnderstandingV1({
     'username': 'b9101fd1-37c4-4d23-9366-b9af5cc95bab',

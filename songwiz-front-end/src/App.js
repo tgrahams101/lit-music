@@ -5,14 +5,7 @@ import axios from 'axios';
 import Search from './components/Search';
 import SongList from './components/SongList';
 import keys from './env.js';
-import NaturalLanguageUnderstandingV1 from 'watson-developer-cloud/natural-language-understanding/v1.js';
 import SongReport from './components/SongReport';
-
-const natural_language_understanding = new NaturalLanguageUnderstandingV1({
-  'username': 'b9101fd1-37c4-4d23-9366-b9af5cc95bab',
-  'password': 'd7kb4FwXUbCk',
-  'version': '2018-03-16'
-});
 
 class App extends Component {
   constructor() {
@@ -31,8 +24,9 @@ class App extends Component {
   async componentDidMount() {
     try {
       let response = await axios.get('https://spotify-lit-node-server.herokuapp.com/api/token');
-      // let response = await axios.get('http://ec2-54-213-129-218.us-west-2.compute.amazonaws.com:3001')
+      // let responseNode = await axios.get('http://ec2-54-213-129-218.us-west-2.compute.amazonaws.com:3001/api/token');
       console.log('RESPONSE FROM TOKEN REFRESH', response.data);
+      // console.log('RESPONSE FROM NODE API SERVER', responseNode, responseNode.data);
       this.setState({
         token: `Bearer ${response.data.access_token}`
       });

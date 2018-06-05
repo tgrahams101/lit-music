@@ -56,8 +56,8 @@ class SongReport extends Component {
             <button onClick={ () => {this.setState({showLyrics: !this.state.showLyrics})}         }> See lyrics from this song! </button>
             <a target="_blank" href={this.props.songReport.song.listenUrl}> <button> Listen on Spotify </button>   </a>
             {this.state.showLyrics ? <p> {this.props.songReport.lyrics} </p> : null}
-
-            <p> Following keywords identified for this song: <ul> { keywords.map( (element) => <li> {element} </li>    ) } </ul> </p>
+            <img src={this.props.songReport.song.artworkUrl} />
+            <p> Following keywords were identified for this song: <ul> { keywords.map( (element) => <li> {element} </li>    ) } </ul> </p>
             <BarChart style={{'margin': '0 auto'}}
                 width={600}
                 height={400}
