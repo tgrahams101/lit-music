@@ -19,10 +19,10 @@ import { FavoritesComponent } from './favorites/favorites.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     FormsModule,
     HttpModule,
-    RoutingModule
+    RoutingModule,
+    HttpClientModule
   ],
   providers: [FetchMusicService],
   bootstrap: [AppComponent]

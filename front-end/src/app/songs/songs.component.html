@@ -1,5 +1,5 @@
-<div id="songs_header">
-  <a routerLink="/favorites"><p> See Favorited Songs</p> </a>
+<div id="songs-header">
+  <a routerLink="/favorites"><p id="favorites-link"> See Favorited Songs</p> </a>
   <input type="text" placeholder="Search Spotify" [(ngModel)]="searchQuery" (keyup)="searchTracks(searchQuery)"/>
   <br />
   <button (click)="fetchMusic()"> Most Lit Songs (United States) </button>
@@ -8,13 +8,13 @@
 
 <section *ngIf="songs">
 
-  <div *ngFor="let song of songs">
-    <h3> {{song.title}} </h3>
-    <h4>{{song.artistName}}</h4>
+  <div *ngFor="let song of songs; index as i" [attr.data-index]="i" data-song-display>
+    <h3 id="song-{{i}}-title"> {{song.title}} </h3>
+    <h4 id="song-{{i}}-artist-name">{{song.artistName}}</h4>
     <div class="image_container">
       <img class="thumbs" (click)="incrementLikes(song)" src="https://findicons.com/files/icons/2831/mono_business_2/128/thumbs_up.png" />
-      <a href="{{song.playUrl}}"><img class="artwork"src="{{song.artworkUrl}}" /> </a>
-      <img class="heart" (click)="addFavorite(song)" src="http://www.iconarchive.com/download/i54496/simplefly/simple-green-social-media/social-media-love.ico" />
+      <a href="{{song.playUrl}}"><img class="artwork"src="{{song.artworkUrl}}" id="song-{{i}}-artwork-url"/> </a>
+      <img class="heart" (click)="addFavorite(song)" src="http://www.iconarchive.com/download/i54496/simplefly/simple-green-social-media/social-media-love.ico" id="add-favorite-{{i}}" />
     </div>
 
     <p> <b><u><span class="popularity">Popularity Score: {{song.popularityScore}} </span></u></b></p>

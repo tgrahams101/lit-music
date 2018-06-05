@@ -53,7 +53,7 @@ export class SongsComponent implements OnInit {
   }
 
   getToken() {
-    this.http.get('https://spotify-lit-node-server.herokuapp.com/api/token')
+    this.http.get(`${environment.nodeHost}/api/token`)
       .toPromise()
       .then( (response) => {
         console.log('RESPONSE FROM SPOTIFY API', Object.keys(response));
@@ -105,6 +105,7 @@ export class SongsComponent implements OnInit {
     console.log('SONG TO ADD', songToAdd);
     const url = 'http://api-gateway:8080/favorites/';
     const localUrl = 'http://localhost:8080/favorites';
+    console.log('WHATS THE ENV VARIABLE', environment.apiHost);
     this.http.post(`${environment.apiHost}/api/favorites`, songToAdd)
     .subscribe( (response) => {
       console.log(response);

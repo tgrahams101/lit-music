@@ -1,0 +1,280 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+  <meta charset="utf-8" />
+  <title>Spotify LIT</title>
+  <base href="/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+<style type="text/css">/* You can add global styles to this file, and also import other style files */
+</style><style>header[_ngcontent-c0] {
+    text-align: center;
+    background: linear-gradient(rgb(224, 255, 255),white);
+    padding-top: 35px;
+    border-radius: 15%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.75em;
+}
+
+header[_ngcontent-c0]   *[_ngcontent-c0] {
+    display: inline-block;
+}
+
+header[_ngcontent-c0]    &gt; img[_ngcontent-c0]:first-of-type {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+}
+
+header[_ngcontent-c0]    &gt; img[_ngcontent-c0]:last-of-type {
+    width: 75px;
+    height: 75px;
+    margin-left: .5em;
+}
+
+h1[_ngcontent-c0]   span[_ngcontent-c0] {
+    border-bottom: 5px solid black;
+}
+
+a[_ngcontent-c0]   span[_ngcontent-c0] {
+    font-size: 15px;
+    top: 20;
+    right: 20%;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+}
+
+a[_ngcontent-c0]   span[_ngcontent-c0]   i[_ngcontent-c0] {
+    margin-left: 10px;
+    color: inherit;
+}</style><style>section[_ngcontent-c1] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    text-align: center;
+}
+
+image_container[_ngcontent-c1] {
+    position: relative;
+}
+
+section[_ngcontent-c1]   img[_ngcontent-c1] {
+    border-radius: 15%;
+}
+
+h3[_ngcontent-c1], h4[_ngcontent-c1] {
+    text-align: center;
+    font-family: Tahoma;
+}
+
+.heart[_ngcontent-c1] {
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    display: inline;
+    
+}
+
+#songs-header[_ngcontent-c1]   button[_ngcontent-c1] {
+    border: none;
+    margin: 0 auto;
+    display: block;
+    border-radius: 15%;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#songs-header[_ngcontent-c1]   input[_ngcontent-c1] {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid skyblue;
+    padding: 10px;
+    border-radius: 10%;
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.4),
+            0 0 16px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+.heart[_ngcontent-c1]:hover, .thumbs[_ngcontent-c1]:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+}
+
+.artwork[_ngcontent-c1]:hover {
+    -webkit-animation: shake 0.8s;
+            animation: shake 0.8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+.popularity[_ngcontent-c1]:hover {
+    -webkit-animation: spin .5s;
+            animation: spin .5s;
+}
+
+.popularity[_ngcontent-c1] {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.thumbs[_ngcontent-c1] {
+    width: 40px;
+    height: 40px;
+}
+
+section[_ngcontent-c1]   p[_ngcontent-c1] {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+    section[_ngcontent-c1] {
+        -ms-grid-columns: (1fr)[2];
+            grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    section[_ngcontent-c1] {
+        -ms-grid-columns: (1fr)[1];
+            grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(1px, 1px) rotate(0deg); transform: translate(1px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(3px, 2px) rotate(0deg); transform: translate(3px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(3px, 1px) rotate(-1deg); transform: translate(3px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(1px, 2px) rotate(0deg); transform: translate(1px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes shake {
+    0% { -webkit-transform: translate(1px, 1px) rotate(0deg); transform: translate(1px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(3px, 2px) rotate(0deg); transform: translate(3px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(3px, 1px) rotate(-1deg); transform: translate(3px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(1px, 2px) rotate(0deg); transform: translate(1px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    to {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+}
+
+#songs-header[_ngcontent-c1]   p[_ngcontent-c1] {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    padding: 5px;
+}
+
+#click_prompt[_ngcontent-c1] {
+    border-radius: 20px;
+    border: 2px solid lightcoral;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    width: 120px;
+}
+
+#click_prompt[_ngcontent-c1]:hover {
+    background-color: gray;
+}
+
+#prompt_container[_ngcontent-c1] {
+    display: flex;
+    margin-top: 30px;
+}
+
+#tight[_ngcontent-c1] {
+    width: 50px;
+    height:50px;
+    
+    
+    margin-left: 5px;
+    border-radius: 20%;
+    margin-top: 10px;
+}</style><style>img[_ngcontent-c2] {
+    width: 200px;
+    height: 200px;
+}
+section[_ngcontent-c2] {
+
+    display: -ms-grid;
+
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    text-align: center;
+
+}
+h3[_ngcontent-c2] {
+    text-align: center;
+}
+img[_ngcontent-c2] {
+    border-radius: 15%;
+}
+a[_ngcontent-c2]{
+    text-align: center;
+}
+p[_ngcontent-c2] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+button[_ngcontent-c2] {
+    border: none;
+    color: white;
+    background-color: rgb(128, 30, 0);
+    border-radius: 15%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+@media (max-width: 1000px) {
+    section[_ngcontent-c2] {
+        -ms-grid-columns: (1fr)[2];
+            grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    section[_ngcontent-c2] {
+        -ms-grid-columns: (1fr)[1];
+            grid-template-columns: repeat(1, 1fr);
+    }
+}</style></head>
+<body>
+  <app-root _nghost-c0="" ng-version="6.0.1"><header _ngcontent-c0=""><a _ngcontent-c0="" href="https://github.com/tgrahams101"><span _ngcontent-c0="">By Ted Anyansi<i _ngcontent-c0="" class="fab fa-github"></i></span></a><img _ngcontent-c0="" src="https://images.vexels.com/media/users/3/137413/isolated/lists/4acb8e52632aa9b7c874b878eaf02bc4-spotify-icon-logo.png" /><h1 _ngcontent-c0="">Spotify <span _ngcontent-c0=""> LIT </span></h1><img _ngcontent-c0="" src="https://images.vexels.com/media/users/3/137265/isolated/lists/0ce8081c9875c9aedea316899d7e6369-fire-cartoon-flame-illustration.png" /></header><router-outlet _ngcontent-c0=""></router-outlet><app-favorites _nghost-c2=""><h3 _ngcontent-c2="" id="favorites-header">Favorites! </h3><a _ngcontent-c2="" id="navigate-home" routerlink="/" ng-reflect-router-link="/" href="/"><p _ngcontent-c2="">Go Home</p></a><!--bindings={
+  "ng-reflect-ng-if": "[object Object]"
+}--><section _ngcontent-c2=""><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-c2="" data-favorite-display="" data-favorite-index="0"><p _ngcontent-c2="" id="favorite-0-artist-name"><b _ngcontent-c2="">Artist: </b> Hanz Zimmer</p><p _ngcontent-c2="" id="favorite-0-title"><b _ngcontent-c2=""> Like a Dog Chasing Cars</b></p><img _ngcontent-c2="" id="favorite-0-artwork-url" src="darkknight.png" /><button _ngcontent-c2="" id="delete-song-0">Unfavorite</button></div></section></app-favorites></app-root>
+
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body></html>

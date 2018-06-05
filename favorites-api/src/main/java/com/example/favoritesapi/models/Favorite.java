@@ -20,4 +20,10 @@ public class Favorite {
 
     @Column(name ="artwork_url")
     private String artworkUrl;
+
+    public Favorite(String title, String artistName, String artworkUrl) {
+        this.title = title;
+        this.artistName = artistName;
+        this.artworkUrl = artworkUrl;
+    }
 }
