@@ -57,7 +57,7 @@ class SongReport extends Component {
             <a target="_blank" href={this.props.songReport.song.listenUrl}> <button> Listen on Spotify </button>   </a>
             {this.state.showLyrics ? <p> {this.props.songReport.lyrics} </p> : null}
             <img src={this.props.songReport.song.artworkUrl} />
-            <p> Following keywords were identified for this song: <ul> { keywords.map( (element) => <li> {element} </li>    ) } </ul> </p>
+            <p> The following keywords were identified for this song:</p> <ul> { keywords.map( (element, index) => <li key={index}> {element} </li>    ) } </ul>
             <BarChart style={{'margin': '0 auto'}}
                 width={600}
                 height={400}
