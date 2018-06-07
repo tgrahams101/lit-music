@@ -126,6 +126,11 @@ section p {
     font-size: 12px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     padding: 5px;
+    margin-bottom: 20px;
+}
+
+.fa {
+    margin-left: 10px;
 }
 
 #click_prompt {
