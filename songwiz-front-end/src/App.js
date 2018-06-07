@@ -120,7 +120,8 @@ class App extends Component {
       let endCharIndex = lyrics.indexOf('..');
       lyrics = lyrics.slice(0, endCharIndex);
       console.log('GETTING TO POST LYRICS');
-      const urlAnalyze = 'http://localhost:3001/analyzesong';
+      // const urlAnalyze = 'http://localhost:3001/analyzesong';
+      const urlAnalyze = process.env.REACT_APP_NODE_SERVER_HOST + '/analyzesong';
       const optionsAnalyze = {
         'lyrics': lyrics 
       };
