@@ -174,9 +174,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header"><a href="http://spotify-lit.s3-website-us-west-2.amazonaws.com/" id="navigate"><span> Navigate to Spotify LIT </span></a>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/168px-Spotify_logo_without_text.svg.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to SongWiz</h1>
+          <a href="http://www.github.com/tgrahams101"><h6> By Ted Anyansi </h6> </a>
           <p> Powered by <img id="logo" src="http://2017.designmatters.io/media/1340/spotify-logo.png" /> </p>
         </header>
         <Search searchSpotify={this.searchSpotify} />
